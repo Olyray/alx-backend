@@ -8,3 +8,4 @@ These are the modules in the directory:
 3) 2-lifo_cache.py - Implementation of LIFO cache replacement policy
 4) 3-lru_cache.py - Implementation of LRU cache replacement policy
 5) 4-mru_cache.py - Implementation of MRU cache replacement policy
+6) 100-lfu_cache.py - Implementation of LFU cache replacement policy

@@ -43,6 +43,7 @@ def get_user():
 
 @app.before_request
 def before_request():
+    """Function to call before requests are run"""
     current_user = get_user()
     if current_user:
         g.user = current_user

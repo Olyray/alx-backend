@@ -13,7 +13,6 @@ const sendNotification = (phoneNumber, message, job, done) => {
   console.log(`Sending notification to ${phoneNumber}, with message: ${message}`);
   // Simulate sending a notification...
   setTimeout(() => {
-    console.log(`Notification sent to ${phoneNumber}`);
     done(); // Complete the job
   }, 2000); // Simulated delay of 2 seconds
 };
@@ -24,5 +23,5 @@ const queue = kue.createQueue({ name: 'push_notification_code_2' });
 
 const queueName = 'push_notification_code_2';
 queue.process(queueName, 2, (job, done) => {
-  sendNotification(job.data.phoneNumber, job.data.message, job, done);
+  sendNotification(job.data.obj.phoneNumber, job.data.obj.message, job, done);
 });
